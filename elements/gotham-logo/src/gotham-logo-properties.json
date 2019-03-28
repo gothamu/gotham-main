@@ -1,0 +1,9 @@
+{
+  "theme": {
+    "name": "theme",
+    "type": "String",
+    "value": "light",
+    "reflectToAttribute": true,
+    "observer": "_themeChanged"
+  }
+}

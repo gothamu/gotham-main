@@ -1,0 +1,23 @@
+:host {
+  --gotham-logo-fill: #410a41;
+  --gotham-logo-fill-dark: #e8b0e8;
+  display: block;
+}
+
+:host([hidden]) {
+  display: none;
+}
+
+#container {
+  display: block;
+  overflow: hidden;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  fill: var(--gotham-logo-fill);
+}
+:host([theme="dark"]) svg {
+  fill: var(--gotham-logo-fill-dark);
+}
