@@ -1,6 +1,6 @@
 {
   "name": "@gotham/gotham-main",
-  "version": "0.0.0",
+  "version": "0.0.7",
   "description": "Web component library for Gotham University.",
   "wcfactory": {
     "askSASS": true,
