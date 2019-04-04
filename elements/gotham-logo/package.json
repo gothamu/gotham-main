@@ -16,7 +16,7 @@
       "hax": "src/gotham-logo-hax.json"
     }
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official mark of Gotham University.",
   "repository": {
     "type": "git",
