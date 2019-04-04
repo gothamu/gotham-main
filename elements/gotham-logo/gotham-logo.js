@@ -17,12 +17,14 @@ import { HAXWiring } from "@lrnwebcomponents/hax-body-behaviors/lib/HAXWiring.js
  * @demo demo/index.html
  */
 class GothamLogo extends LitElement {
+  
   // render function
   render() {
     return html`
 <style>:host {
   --gotham-logo-fill: #410a41;
   --gotham-logo-fill-dark: #e8b0e8;
+  --gotham-logo-height: 80px;
   display: block;
 }
 
@@ -37,7 +39,7 @@ class GothamLogo extends LitElement {
 
 svg {
   width: 100%;
-  height: auto;
+  height: var(--gotham-logo-height);
   fill: var(--gotham-logo-fill);
 }
 :host([theme="dark"]) svg {
@@ -65,51 +67,53 @@ svg {
   // haxProperty definition
   static get haxProperties() {
     return {
-      canScale: true,
-      canPosition: true,
-      canEditSource: false,
-      gizmo: {
-        title: "Gotham logo",
-        description: "Official mark of Gotham University.",
-        icon: "icons:android",
-        color: "green",
-        groups: ["Logo"],
-        handles: [
-          {
-            type: "todo:read-the-docs-for-usage"
-          }
-        ],
-        meta: {
-          author: "heymp",
-          owner: "Gotham University"
-        }
-      },
-      settings: {
-        quick: [],
-        configure: [
-          {
-            property: "theme",
-            description: "",
-            inputMethod: "textfield",
-            required: false,
-            icon: "icons:android"
-          }
-        ],
-        advanced: []
+  "canScale": true,
+  "canPosition": true,
+  "canEditSource": false,
+  "gizmo": {
+    "title": "Gotham logo",
+    "description": "Official mark of Gotham University.",
+    "icon": "icons:android",
+    "color": "green",
+    "groups": ["Logo"],
+    "handles": [
+      {
+        "type": "todo:read-the-docs-for-usage"
       }
-    };
+    ],
+    "meta": {
+      "author": "heymp",
+      "owner": "Gotham University"
+    }
+  },
+  "settings": {
+    "quick": [],
+    "configure": [
+      {
+        "property": "theme",
+        "description": "",
+        "inputMethod": "textfield",
+        "required": false,
+        "icon": "icons:android"
+      }
+    ],
+    "advanced": []
+  }
+}
+;
   }
   // properties available to the custom element for data binding
   static get properties() {
     return {
-      theme: {
-        name: "theme",
-        type: "String",
-        value: "light",
-        reflectToAttribute: true,
-        observer: "_themeChanged"
-      }
-    };
+  "theme": {
+    "name": "theme",
+    "type": "String",
+    "value": "light",
+    "reflectToAttribute": true,
+    "observer": "_themeChanged"
+  }
+}
+;
   }
 
   /**
