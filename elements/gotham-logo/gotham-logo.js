@@ -17,103 +17,116 @@ import { HAXWiring } from "@lrnwebcomponents/hax-body-behaviors/lib/HAXWiring.js
  * @demo demo/index.html
  */
 class GothamLogo extends LitElement {
-  
   // render function
   render() {
     return html`
-<style>:host {
-  --gotham-logo-fill: #410a41;
-  --gotham-logo-fill-dark: #e8b0e8;
-  --gotham-logo-height: 80px;
-  display: block;
-}
+      <style>
+        :host {
+          --gotham-logo-fill: #410a41;
+          --gotham-logo-fill-dark: #e8b0e8;
+          --gotham-logo-height: 80px;
+          display: block;
+        }
 
-:host([hidden]) {
-  display: none;
-}
+        :host([hidden]) {
+          display: none;
+        }
 
-#container {
-  display: block;
-  overflow: hidden;
-}
+        #container {
+          display: block;
+          overflow: hidden;
+        }
 
-svg {
-  width: 100%;
-  height: var(--gotham-logo-height);
-  fill: var(--gotham-logo-fill);
-}
-:host([theme="dark"]) svg {
-  fill: var(--gotham-logo-fill-dark);
-}</style>
-<div id="container">
-  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    width="896.275px" height="896.275px" viewBox="0 0 896.275 896.275" style="enable-background:new 0 0 896.275 896.275;"
-    xml:space="preserve">
-  <g>
-    <path d="M741.371,0L589.225,184.435c-41.758-23.773-91.697-35.617-142.945-35.617c-51.609,0-100.07,12.018-142.026,36.165
-      L155.341,0l-0.104,463.281c-0.748,12.105,0,24.436,0,37.271c0,177.252,72.321,329.373,175.791,394.852
-      c-58.271-75.131-108.722-156.678-85.348-235.877c133.931-5.393,148.087-6.104,148.087-6.104l47.305,38.557l58.178-38.557
-      c97.408,0.695,143.383,2.713,143.383,2.713c6.035,49.635-2.592,158.486-85.869,240.139
-      C660.92,831.232,734.676,678.57,734.676,500.57c0-12.469-0.547-24.52-0.547-36.295L741.371,0z M380.706,522.432
-      c-13.982,5.6-45.296,24.051-59.844,28.521c-14.548,4.486-34.67,7.27-42.504,0c-7.834-7.271-33.009-31.322-38.035-36.904
-      c-5.035-5.617-8.392-50.365,21.252-48.105c30.191,2.279,111.861,35.791,116.896,37.461
-      C383.505,505.092,394.689,516.83,380.706,522.432z M647.971,514.049c-5.025,5.582-30.207,29.635-38.025,36.904
-      c-7.854,7.27-27.957,4.486-42.504,0c-14.539-4.471-45.861-22.924-59.844-28.521c-14-5.602-2.801-17.34,2.227-19.027
-      c5.035-1.67,86.703-35.182,116.904-37.461C656.379,463.684,653.023,508.432,647.971,514.049z"/>
-  </svg>
-</div>`;
+        svg {
+          width: 100%;
+          height: var(--gotham-logo-height);
+          fill: var(--gotham-logo-fill);
+        }
+        :host([theme="dark"]) svg {
+          fill: var(--gotham-logo-fill-dark);
+        }
+      </style>
+      <div id="container">
+        <svg
+          version="1.1"
+          id="Capa_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 269.996 269.996"
+          style="enable-background:new 0 0 269.996 269.996;"
+          xml:space="preserve"
+        >
+          <g>
+            <g>
+              <path
+                d="M256.925,137.064c-0.823,0.067-1.63,0.149-2.426,0.24
+       C255.365,137.532,256.189,137.475,256.925,137.064z"
+              />
+              <path
+                d="M267.728,99.195c-29.327-26.908-9.023-52.473,2.268-59.774
+       c-74.255,29.398-69.55,105.234-81.829,113.156c-11.727,7.797-22.692-2.98-28.14-13.195c3.392,13.162-10.42,21.885-20.414,7.166
+       c2.686,20.109,9.489,33.442-18.316,25.955C90.703,164.274,39.174,139.222,0,170.907c22.894-1.74,47.758,16.474,46.624,36.849
+       c16.125-12.228,41.249,3.672,40.871,22.819c7.446-20.636,40.434-25.318,55.434-6.389c-5.479-33.531,35.738-27.986,44.412-6.672
+       c-10.837-45.279,22.031-46.93,40.482-36.654c-6.701-28.987,4.347-40.996,26.676-43.555
+       C245.425,134.918,231.762,100.52,267.728,99.195z"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+    `;
   }
 
   // haxProperty definition
   static get haxProperties() {
     return {
-  "canScale": true,
-  "canPosition": true,
-  "canEditSource": false,
-  "gizmo": {
-    "title": "Gotham logo",
-    "description": "Official mark of Gotham University.",
-    "icon": "icons:android",
-    "color": "green",
-    "groups": ["Logo"],
-    "handles": [
-      {
-        "type": "todo:read-the-docs-for-usage"
+      canScale: true,
+      canPosition: true,
+      canEditSource: false,
+      gizmo: {
+        title: "Gotham logo",
+        description: "Official mark of Gotham University.",
+        icon: "icons:android",
+        color: "green",
+        groups: ["Logo"],
+        handles: [
+          {
+            type: "todo:read-the-docs-for-usage"
+          }
+        ],
+        meta: {
+          author: "heymp",
+          owner: "Gotham University"
+        }
+      },
+      settings: {
+        quick: [],
+        configure: [
+          {
+            property: "theme",
+            description: "",
+            inputMethod: "textfield",
+            required: false,
+            icon: "icons:android"
+          }
+        ],
+        advanced: []
       }
-    ],
-    "meta": {
-      "author": "heymp",
-      "owner": "Gotham University"
-    }
-  },
-  "settings": {
-    "quick": [],
-    "configure": [
-      {
-        "property": "theme",
-        "description": "",
-        "inputMethod": "textfield",
-        "required": false,
-        "icon": "icons:android"
-      }
-    ],
-    "advanced": []
-  }
-}
-;
+    };
   }
   // properties available to the custom element for data binding
   static get properties() {
     return {
-  "theme": {
-    "name": "theme",
-    "type": "String",
-    "value": "light",
-    "reflectToAttribute": true,
-    "observer": "_themeChanged"
-  }
-}
-;
+      theme: {
+        name: "theme",
+        type: "String",
+        value: "light",
+        reflectToAttribute: true,
+        observer: "_themeChanged"
+      }
+    };
   }
 
   /**
