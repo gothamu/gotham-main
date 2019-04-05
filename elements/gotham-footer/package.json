@@ -16,7 +16,7 @@
       "hax": "src/gotham-footer-hax.json"
     }
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "repository": {
     "type": "git",
@@ -40,7 +40,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@gotham/gotham-logo": "^0.1.1"
+    "@gotham/gotham-logo": "^0.1.2"
   },
   "devDependencies": {
     "@lrnwebcomponents/deduping-fix": "0.2.0",
